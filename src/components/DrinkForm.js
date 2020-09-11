@@ -35,7 +35,7 @@ function DrinkForm(props) {
         <Form.Group controlId='content'>
           <Form.Label>Alcohol Content</Form.Label>
           <InputGroup>
-            <Form.Control type='text' placeholder='Content' defaultValue={defaultContent} pattern='^\d+\.\d+$' required />
+            <Form.Control type='text' placeholder='Content' defaultValue={defaultContent} pattern='^\d{1,2}\.\d+$' required />
             <InputGroup.Append>
               <InputGroup.Text>%</InputGroup.Text>
             </InputGroup.Append>

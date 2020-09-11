@@ -33,3 +33,5 @@ EditDrink.propTypes = {
   onEditDrink: PropTypes.func.isRequired,
   drink: PropTypes.object.isRequired
 }
+
+export default EditDrink;

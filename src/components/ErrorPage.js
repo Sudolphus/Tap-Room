@@ -14,3 +14,5 @@ function ErrorPage(props) {
 ErrorPage.propTypes = {
   onLinkClick: PropTypes.func.isRequired
 }
+
+export default ErrorPage;

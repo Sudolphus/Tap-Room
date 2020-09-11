@@ -2,13 +2,16 @@ import React from 'react';
 import DrinkList from './DrinkList';
 import DrinkDetails from './DrinkDetails';
 import AddDrink from './AddDrink';
+import EditDrink from './EditDrink';
+import ErrorPage from './ErrorPage';
 
 const sampleDrink1 = {
   name: 'drink1',
   brand: 'brand1',
   price: '4.00',
   alcoholContent: '5',
-  quantity: 124
+  quantity: 124,
+  id: 1
 }
 
 const sampleDrink2 = {
@@ -16,7 +19,8 @@ const sampleDrink2 = {
   brand: 'brand2',
   price: '5.00',
   alcoholContent: '5.5',
-  quantity: 94
+  quantity: 94,
+  id: 2
 }
 
 class TapControl extends React.Component {
@@ -42,6 +46,18 @@ class TapControl extends React.Component {
     this.handleLinks('index');
   }
 
+  handleEditDrink = (editDrink) => {
+    const newDrinkList = this.state.drinkList.map(drink => {
+      if (drink.id === editDrink.id) {
+        return editDrink;
+      } else {
+        return drink;
+      }
+    });
+    this.setState({drinkList: newDrinkList});
+    this.handleLinks('index');
+  }
+
   render() {
     let pageToDisplay;
     switch(this.state.currentPage) {
@@ -60,18 +76,17 @@ class TapControl extends React.Component {
           onLinkClick = {this.handleLinks}
           onAddingDrink = {this.handleAddingDrink} />
         break;
+      case 'edit':
+        pageToDisplay = <EditDrink
+          onLinkClick = {this.handleLinks}
+          onEditDrink = {this.handleEditDrink}
+          drink = {this.state.currentDrink} />
+        break;
       default:
-        this.setState({ currentPage: 'index'});
+        pageToDisplay = <ErrorPage
+          onLinkClick = {this.handleLinks} />;
     }
 
-    // if (this.state.currentPage === 'index') {
-    //   pageToDisplay = <DrinkList
-    //     onLinkClick={this.handleLinks}
-    //     drinkList={this.state.drinkList} />
-    // } else if (this.state.currentPage === 'details') {
-    //   pageToDisplay = <DrinkDetails
-    //     drink = {this.state.currentDrink} />
-    // } else if (this.state.currentPage === 'create')
     return (
       <React.Fragment>
         {pageToDisplay}
