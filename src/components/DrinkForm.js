@@ -29,13 +29,13 @@ function DrinkForm(props) {
             <InputGroup.Prepend>
               <InputGroup.Text>$</InputGroup.Text>
             </InputGroup.Prepend>
-            <Form.Control type='text' placeholder='price' defaultValue={defaultPrice} pattern='^\d+\.\d{2}$' required />
+            <Form.Control type='text' placeholder='Price' defaultValue={defaultPrice} pattern='^\d+\.\d{2}$' required />
           </InputGroup>
         </Form.Group>
         <Form.Group controlId='content'>
           <Form.Label>Alcohol Content</Form.Label>
           <InputGroup>
-            <Form.Control type='text' placeholder='content' defaultValue={defaultContent} pattern='^\d+\.\d+$' required />
+            <Form.Control type='text' placeholder='Content' defaultValue={defaultContent} pattern='^\d+\.\d+$' required />
             <InputGroup.Append>
               <InputGroup.Text>%</InputGroup.Text>
             </InputGroup.Append>
