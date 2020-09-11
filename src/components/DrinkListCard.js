@@ -5,6 +5,10 @@ import Button from 'react-bootstrap/Button';
 
 function DrinkListCard(props) {
   const { onLinkClick, onChangingQuantity, drink } = props;
+  let removeButton = null;
+  if (drink.quantity) {
+    removeButton = <Button variant='secondary' type='button' size='sm' block onClick={()=>onChangingQuantity(drink, -1)}>Remove a Pint</Button>
+  }
   return (
     <Card className="text-center">
       <Card.Body onClick={()=>onLinkClick('details', drink)}>
@@ -15,7 +19,7 @@ function DrinkListCard(props) {
       <Card.Footer>
         <Button variant='primary' type='button' size='sm' block onClick={()=>onChangingQuantity(drink, 1)}>Add a Pint</Button>
         <Button variant='success' type='button' size='sm' block onClick={()=>onChangingQuantity(drink, 124)}>Add a Keg</Button>
-        <Button variant='secondary' type='button' size='sm' block onClick={()=>onChangingQuantity(drink, -1)}>Remove a Pint</Button>
+        {removeButton}
       </Card.Footer>
     </Card>
   )

@@ -23,11 +23,20 @@ const sampleDrink2 = {
   id: 2
 }
 
+const sampleDrink3 = {
+  name: 'drink3',
+  brand: 'brand3',
+  price: '5.00',
+  alcoholContent: '5.5',
+  quantity: 0,
+  id: 3
+}
+
 class TapControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      drinkList: [sampleDrink1, sampleDrink2],
+      drinkList: [sampleDrink1, sampleDrink2, sampleDrink3],
       currentPage: 'index',
       currentDrink: null
     }
