@@ -64,6 +64,18 @@ class TapControl extends React.Component {
     this.handleLinks('index');
   }
 
+  handleChangeDrinksRemaining = (drink, amount) => {
+    const newDrink = {
+      name: drink.name,
+      brand: drink.brand,
+      price: drink.price,
+      alcoholContent: drink.alcoholContent,
+      quantity: drink.quantity + amount,
+      id: drink.id
+    }
+    this.handleEditDrink(newDrink);
+  }
+
   render() {
     let pageToDisplay;
     switch(this.state.currentPage) {
