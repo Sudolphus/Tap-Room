@@ -52,6 +52,7 @@ class TapControl extends React.Component {
         break;
       case 'details':
         pageToDisplay = <DrinkDetails
+          onLinkClick = {this.handleLinks}
           drink = {this.state.currentDrink} />
         break;
       case 'create':

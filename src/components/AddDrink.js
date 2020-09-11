@@ -10,8 +10,8 @@ function AddDrink(props) {
     onAddingDrink({
       name: event.target.name.value,
       brand: event.target.brand.value,
-      price: event.target.brand.value,
-      content: event.target.brand.value,
+      price: event.target.price.value,
+      alcoholContent: event.target.content.value,
       quantity: 124,
       id: v1()
     });

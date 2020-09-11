@@ -1,13 +1,14 @@
 import React from 'react';
 import TapControl from './TapControl';
 import Header from './Header';
+import Container from 'react-bootstrap/Container';
 
 function App() {
   return (
-    <React.Fragment>
+    <Container fluid>
       <Header />
       <TapControl />
-    </React.Fragment>
+    </Container>
   );
 }
 
