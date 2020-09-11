@@ -1,8 +1,9 @@
 import React from 'react';
+import TapControl from './TapControl';
 
 function App() {
   return (
-    <p>This is where code will go, eventually.</p>
+    <TapControl />
   );
 }
 
