@@ -82,3 +82,4 @@ This project should be entirely self contained, so once the file is built, openi
 
 - Thank you to [React-Bootstrap](https://react-bootstrap.netlify.app/) for the react-bootstrap package
 - Thank you to [Christin Hume](https://www.christinhumephoto.com/) for the project logo image
+- Thank you to [Laura Chouette](https://unsplash.com/@laurachouette) for the Stout image
