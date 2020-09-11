@@ -1,6 +1,7 @@
 import React from 'react';
 import DrinkList from './DrinkList';
 import DrinkDetails from './DrinkDetails';
+import AddDrink from './AddDrink';
 
 const sampleDrink1 = {
   name: 'drink1',
@@ -35,16 +36,41 @@ class TapControl extends React.Component {
     });
   }
 
+  handleAddingDrink = (newDrink) => {
+    const newDrinkList = this.state.drinkList.concat(newDrink);
+    this.setState({ drinkList: newDrinkList });
+    this.handleLinks('index');
+  }
+
   render() {
     let pageToDisplay;
-    if (this.state.currentPage === 'index') {
-      pageToDisplay = <DrinkList
+    switch(this.state.currentPage) {
+      case 'index':
+        pageToDisplay = <DrinkList
         onLinkClick={this.handleLinks}
-        drinkList={this.state.drinkList} />
-    } else if (this.state.currentPage === 'details') {
-      pageToDisplay = <DrinkDetails
-        drink = {this.state.currentDrink} />
+        drinkList={this.state.drinkList} /> 
+        break;
+      case 'details':
+        pageToDisplay = <DrinkDetails
+          drink = {this.state.currentDrink} />
+        break;
+      case 'create':
+        pageToDisplay = <AddDrink
+          onLinkClick = {this.handleLinks}
+          onAddingDrink = {this.handleAddingDrink} />
+        break;
+      default:
+        this.setState({ currentPage: 'index'});
     }
+
+    // if (this.state.currentPage === 'index') {
+    //   pageToDisplay = <DrinkList
+    //     onLinkClick={this.handleLinks}
+    //     drinkList={this.state.drinkList} />
+    // } else if (this.state.currentPage === 'details') {
+    //   pageToDisplay = <DrinkDetails
+    //     drink = {this.state.currentDrink} />
+    // } else if (this.state.currentPage === 'create')
     return (
       <React.Fragment>
         {pageToDisplay}
