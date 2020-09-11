@@ -82,6 +82,7 @@ class TapControl extends React.Component {
       case 'index':
         pageToDisplay = <DrinkList
         onLinkClick={this.handleLinks}
+        onChangingQuantity = {this.handleChangeDrinksRemaining}
         drinkList={this.state.drinkList} /> 
         break;
       case 'details':
