@@ -21,14 +21,21 @@ class TapControl extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      drinkList: [sampleDrink1, sampleDrink2]
+      drinkList: [sampleDrink1, sampleDrink2],
+      currentPage: 'index'
     }
   }
 
   render() {
+    let pageToDisplay;
+    if (this.state.currentPage === 'index') {
+      pageToDisplay = <DrinkList
+      drinkList={this.state.drinkList} />
+    }
     return (
-      <DrinkList
-        drinkList={this.state.drinkList} />
+      <React.Fragment>
+        {pageToDisplay}
+      </React.Fragment>
     )
   }
 }
