@@ -1,10 +1,10 @@
 import React from 'react';
+import Image from 'react-bootstrap/Image';
+import logo from './img/Logo.png';
 
 function Header() {
   return (
-    <div className="text-center">
-      <h1>Tap House</h1>
-    </div>
+    <Image src={logo} className='mx-auto d-block' />
   )
 }
 

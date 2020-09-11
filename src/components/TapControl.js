@@ -79,7 +79,7 @@ class TapControl extends React.Component {
       brand: drink.brand,
       price: drink.price,
       alcoholContent: drink.alcoholContent,
-      quantity: drink.quantity + amount,
+      quantity: Math.max(drink.quantity + amount, 0),
       id: drink.id
     }
     this.handleEditDrink(newDrink);

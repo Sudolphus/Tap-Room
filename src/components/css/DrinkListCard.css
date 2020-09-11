@@ -1,0 +1,25 @@
+.card {
+  background-color: #e6e6fa;
+}
+
+.card-title {
+  font-weight: bolder;
+  color: blue;
+}
+
+.card-title:hover {
+  cursor: pointer;
+  color: darkblue;
+}
+
+.stock-warning {
+  color:#474A2C;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.out-of-stock {
+  color: red;
+  font-weight: bolder;
+  font-style: italic;
+}
