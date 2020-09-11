@@ -58,6 +58,12 @@ class TapControl extends React.Component {
     this.handleLinks('index');
   }
 
+  handleDeleteDrink = (deleteDrink) => {
+    const newDrinkList = this.state.drinkList.filter(drink => drink.id !== deleteDrink.id);
+    this.setState({drinkList: newDrinkList});
+    this.handleLinks('index');
+  }
+
   render() {
     let pageToDisplay;
     switch(this.state.currentPage) {
