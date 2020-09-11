@@ -8,6 +8,7 @@ function DrinkListCard(props) {
   const { onLinkClick, onChangingQuantity, drink } = props;
   let removeButton;
   let quantity;
+  let priceColor;
 
   if (drink.quantity > 0) {
     removeButton = <Button variant='secondary' type='button' size='sm' block onClick={()=>onChangingQuantity(drink, -1)}>Remove a Pint</Button>
@@ -21,11 +22,19 @@ function DrinkListCard(props) {
     removeButton = <Button variant='secondary' type='button' size='sm' block disabled>Remove a Pint</Button>;
   }
 
+  if (parseFloat(drink.price) > 7) {
+    priceColor = 'text-danger';
+  } else if (parseFloat(drink.price) > 4) {
+    priceColor = 'text-warning';
+  } else {
+    priceColor = 'text-info';
+  }
+
   return (
     <Card className="text-center">
       <Card.Body>
         <Card.Title onClick={()=>onLinkClick('details', drink)}>{drink.name}</Card.Title>
-        <Card.Subtitle>${drink.price}</Card.Subtitle>
+        <Card.Subtitle className={priceColor}>${drink.price}</Card.Subtitle>
         {quantity}
       </Card.Body>
       <Card.Footer>

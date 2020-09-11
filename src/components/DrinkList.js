@@ -13,7 +13,8 @@ function DrinkList(props) {
           <DrinkListCard
             onLinkClick={onLinkClick}
             onChangingQuantity={onChangingQuantity}
-            drink={drink} />)}
+            drink={drink}
+            key={drink.id} />)}
       </CardColumns>
       <Button variant='success' type='button' size='lg' block onClick={()=>onLinkClick('create')}>Add Drink</Button>
     </React.Fragment>
