@@ -16,7 +16,7 @@
 
 ---
 
-<p align="center"> An editable menu for a tap room. Bootstrapped with [Create React App](https://github.com/facebook/create-react-app) with full Create-Read-Update-Destroy functionality.
+<p align="center"> An editable menu for a tap room. Features full Create-Read-Update-Destroy functionality.
     <br> 
 </p>
 
