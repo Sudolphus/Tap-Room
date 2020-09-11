@@ -26,7 +26,7 @@
 - [Getting Started](#getting_started)
 - [Deployment](#deployment)
 - [Usage](#usage)
-- [Components]
+- [Components](#components-)
 - [Built Using](#built_using)
 - [Author](#author)
 - [Acknowledgments](#acknowledgement)
