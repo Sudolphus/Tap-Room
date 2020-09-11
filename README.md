@@ -1,68 +1,84 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <a href="" rel="noopener">
+ <img src="./TapRoom.jpg" alt="Project logo"></a>
+</p>
 
-## Available Scripts
+<h3 align="center">taproom</h3>
 
-In the project directory, you can run:
+<div align="center">
 
-### `npm start`
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![GitHub Issues](https://img.shields.io/github/issues/Sudolphus/Tap-Room.svg)](https://github.com/Sudolphus/Tap-Room/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/Sudolphus/Tap-Room.svg)](https://github.com/Sudolphus/Tap-Room/pulls)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+</div>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+<p align="center"> An editable menu for a tap room. Bootstrapped with [Create React App](https://github.com/facebook/create-react-app) with full Create-Read-Update-Destroy functionality.
+    <br> 
+</p>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📝 Table of Contents
 
-### `npm run build`
+- [About](#about)
+- [Getting Started](#getting_started)
+- [Deployment](#deployment)
+- [Usage](#usage)
+- [Components]
+- [Built Using](#built_using)
+- [Author](#author)
+- [Acknowledgments](#acknowledgement)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🧐 About <a name = "about"></a>
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This is a single-page React app that uses state in order to track the changes that take place within a tap room. It should be capable of displaying a full list of drinks available, the amount remaining of each drink, details about each specific drink, and the ability to add and delete kegs from the list.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-### `npm run eject`
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Prerequisites
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If you wish to edit the code base or deploy the project on your machine, you'll need:
+1. Node (or other package manager)
+2. A terminal, such as GIT Bash or Windows Powershell
+3. A code editor
+4. Git (optional)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Installing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Acquire the repo, by either clicking the download button or running `git clone https://github.com/Sudolphus/Tap-Room`
+2. Install the packages. With Node, this can be done by navigating into the taproom directory and running `npm install`
+3. To run the project, run `npm start`, which will load a development build in your browser.
+4. Alternately, `npm run build` will create a build folder with a production build, which can then be opened in your browser. For other useful scripts, please see the [React Readme](React_README.md)
 
-## Learn More
+## 🎈 Usage <a name="usage"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To use the program, simply load it in your browser, by running the steps above to create a development or production build. Once it's in your browser, the links within in the app should default to a list of the drinks availabe (which will start empty), with a link to add drinks to the menu. Once a drink is added, it should be clickable, which will take you to a details page that contain more information about that drink, as well as links to edit the data for the drink, or remove the drink from the menu.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🚀 Deployment <a name = "deployment"></a>
 
-### Code Splitting
+This project should be entirely self contained, so once the file is built, opening it in the browser should be all you need to do to deploy it.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Components <a name = "components"></a>
 
-### Analyzing the Bundle Size
+[<img src="./ComponentDiagram.png" alt="component diagram">](ComponentDiagram.png)
+[<img src="./ComponentTree.png" alt="component tree">](ComponentTree.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
+## ⛏️ Built Using <a name = "built_using"></a>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+- [NodeJs](https://nodejs.org/en/)
+- [React](https://github.com/facebook/create-react-app)
+- [Bootstrap](https://getbootstrap.com/)
 
-### Advanced Configuration
+## ✍️ Author <a name = "author"></a>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+- [Sudolphus](https://github.com/Sudolphus)
 
-### Deployment
+## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- Thank you to [React-Bootstrap](https://react-bootstrap.netlify.app/) for the react-bootstrap package
+- Thank you to [Christin Hume](https://www.christinhumephoto.com/) for the project logo image
