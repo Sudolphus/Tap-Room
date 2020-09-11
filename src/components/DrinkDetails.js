@@ -11,7 +11,8 @@ function DrinkDetails(props) {
       <h5>{brand}</h5>
       <h5><i>{alcoholContent}% alcohol content</i></h5>
       <p><i>{quantity} remaining</i></p>
-    <Button variant='secondary' type='button' size='lg' block onClick={()=>onLinkClick('index')}>Back To Index</Button>
+      <Button variant='secondary' type='button' size='lg' block onClick={()=>onLinkClick('index')}>Back To Index</Button>
+      <Button variant='warning' type='button' size='lg' block onClick={()=>onLinkClick('edit', drink)}>Edit Drink</Button>
     </React.Fragment>
   )
 }
