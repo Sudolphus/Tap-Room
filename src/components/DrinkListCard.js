@@ -16,9 +16,9 @@ function DrinkListCard(props) {
 }
 
 DrinkListCard.propTypes = {
-  name: PropTypes.string,
-  price: PropTypes.string,
-  quantity: PropTypes.int
+  name: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  quantity: PropTypes.number.isRequired
 }
 
 export default DrinkListCard;
