@@ -4,19 +4,19 @@ import DrinkListCard from './DrinkListCard';
 import CardColumns from 'react-bootstrap/CardColumns';
 
 function DrinkList(props) {
-  const { drinkList } = props;
+  const { onLinkClick, drinkList } = props;
   return (
     <CardColumns>
       {drinkList.map(drink => 
         <DrinkListCard
-          name={drink.name}
-          price={drink.price}
-          quantity={drink.quantity} />)}
+          onLinkClick={onLinkClick}
+          drink={drink} />)}
     </CardColumns>
   )
 }
 
 DrinkList.propTypes = {
+  onLinkClick: PropTypes.func.isRequired,
   drinkList: PropTypes.arrayOf(Object).isRequired
 }
 

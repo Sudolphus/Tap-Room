@@ -1,5 +1,6 @@
 import React from 'react';
 import DrinkList from './DrinkList';
+import DrinkDetails from './DrinkDetails';
 
 const sampleDrink1 = {
   name: 'drink1',
@@ -22,15 +23,27 @@ class TapControl extends React.Component {
     super(props);
     this.state = {
       drinkList: [sampleDrink1, sampleDrink2],
-      currentPage: 'index'
+      currentPage: 'index',
+      currentDrink: null
     }
+  }
+
+  handleLinks = (page, drink = null) => {
+    this.setState({
+      currentPage: page,
+      currentDrink: drink
+    });
   }
 
   render() {
     let pageToDisplay;
     if (this.state.currentPage === 'index') {
       pageToDisplay = <DrinkList
-      drinkList={this.state.drinkList} />
+        onLinkClick={this.handleLinks}
+        drinkList={this.state.drinkList} />
+    } else if (this.state.currentPage === 'details') {
+      pageToDisplay = <DrinkDetails
+        drink = {this.state.currentDrink} />
     }
     return (
       <React.Fragment>
