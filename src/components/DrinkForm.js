@@ -8,13 +8,21 @@ import Col from 'react-bootstrap/Col';
 import './css/DrinkForm.css';
 
 function DrinkForm(props) {
-  const { onLinkClick, onSubmittingForm, buttonText, defaultName, defaultBrand, defaultPrice, defaultContent } = props;
-  
+  const { onLinkClick, onSubmittingForm, buttonText, originalDrink } = props;
+  let [defaultName, defaultBrand, defaultPrice, defaultContent] = [null, null, null, null];
   function handleSubmittingForm(event) {
     event.preventDefault();
     onSubmittingForm(event);
   }
 
+  let returnButton;
+  if (originalDrink) {
+    defaultName = originalDrink.name;
+    defaultBrand = originalDrink.brand;
+    defaultPrice = originalDrink.price;
+    defaultContent = originalDrink.alcoholContent;
+    returnButton = <Button variant='info' type='button' size='lg' block onClick={()=>onLinkClick('details', originalDrink)}>Back To Drink</Button>
+  }
   return (
     <React.Fragment>
       <Form onSubmit={handleSubmittingForm}>
@@ -54,6 +62,7 @@ function DrinkForm(props) {
         </Row>
         <Button variant='success' type='submit' size='lg' block>{buttonText}</Button>
       </Form>
+      {returnButton}
       <Button variant='secondary' type='button' size='lg' block onClick={()=>onLinkClick('index')}>Back To Index</Button>
     </React.Fragment>
   )
@@ -63,10 +72,7 @@ DrinkForm.propTypes = {
   onLinkClick: PropTypes.func.isRequired,
   onSubmittingForm: PropTypes.func.isRequired,
   buttonText: PropTypes.string.isRequired,
-  defaultName: PropTypes.string,
-  defaultBrand: PropTypes.string,
-  defaultPrice: PropTypes.string,
-  defaultContent: PropTypes.string,
+  originalDrink: PropTypes.object
 }
 
 export default DrinkForm;

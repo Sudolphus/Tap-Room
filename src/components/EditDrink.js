@@ -21,10 +21,7 @@ function EditDrink(props) {
       onLinkClick={onLinkClick}
       onSubmittingForm={handleEditingDrink}
       buttonText="Edit Drink"
-      defaultName={drink.name}
-      defaultBrand={drink.brand}
-      defaultPrice={drink.price}
-      defaultContent={drink.alcoholContent} />
+      originalDrink={drink} />
   )
 }
 
