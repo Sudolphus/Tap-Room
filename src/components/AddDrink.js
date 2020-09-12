@@ -12,7 +12,7 @@ function AddDrink(props) {
       brand: event.target.brand.value,
       price: event.target.price.value,
       alcoholContent: event.target.content.value,
-      quantity: 124,
+      quantity: parseInt(event.target.quantity.value),
       id: v1()
     });
   }

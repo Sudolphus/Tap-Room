@@ -11,7 +11,7 @@ function EditDrink(props) {
       brand: event.target.brand.value,
       price: event.target.price.value,
       alcoholContent: event.target.content.value,
-      quantity: drink.quantity,
+      quantity: parseInt(event.target.content.value),
       id: drink.id
     });
   }

@@ -10,7 +10,8 @@ import './css/DrinkForm.css';
 
 function DrinkForm(props) {
   const { onLinkClick, onSubmittingForm, buttonText, originalDrink } = props;
-  let [defaultName, defaultBrand, defaultPrice, defaultContent] = [null, null, null, null];
+  let [defaultName, defaultBrand, defaultPrice, defaultContent, defaultQuantity] = [null, null, null, null, 124];
+  
   function handleSubmittingForm(event) {
     event.preventDefault();
     onSubmittingForm(event);
@@ -22,8 +23,10 @@ function DrinkForm(props) {
     defaultBrand = originalDrink.brand;
     defaultPrice = originalDrink.price;
     defaultContent = originalDrink.alcoholContent;
+    defaultQuantity = originalDrink.quantity;
     returnButton = <Button variant='info' type='button' size='lg' block onClick={()=>onLinkClick('details', originalDrink)}>Back To Drink</Button>
   }
+
   return (
     <Form onSubmit={handleSubmittingForm}>
       <Form.Group controlId='name'>
@@ -57,6 +60,13 @@ function DrinkForm(props) {
               </InputGroup.Append>
             </InputGroup>
             <Form.Text className='text-muted'>Alcohol Content takes a decimal input (e.g. 5.5 or 6.75)</Form.Text>
+          </Form.Group>
+        </Col>
+        <Col>
+          <Form.Group controlId='quantity'>
+            <Form.Label>Pints Remaining</Form.Label>
+            <Form.Control type='number' placeholder='Quantity Remaining' defaultValue={defaultQuantity} pattern='^\d+\$' min='0' step='1' required />
+            <Form.Text>The number of pints you have left. A standard keg is 124 pints.</Form.Text>
           </Form.Group>
         </Col>
       </Row>
