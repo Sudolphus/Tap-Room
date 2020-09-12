@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup'
 import Modal from 'react-bootstrap/Modal';
 import Image from 'react-bootstrap/Image';
 import stout from './img/stout.jpeg';
@@ -27,10 +28,12 @@ function DrinkDetails(props) {
           <Image src={stout} alt='stout' width="90vw" height="90vh" className='float-right'/>
         </Col>
       </Row>
-      <Button variant='secondary' type='button' size='lg' block onClick={()=>onLinkClick('index')}>Back To Index</Button>
-      <Button variant='warning' type='button' size='lg' block onClick={()=>onLinkClick('edit', drink)}>Edit Drink</Button>
-      <Button variant='danger' type='button' size='lg' block onClick={handleShow}>Delete Drink</Button>
-
+      <ButtonGroup vertical size='lg'>
+        <Button variant='secondary' type='button' size='lg' block onClick={()=>onLinkClick('index')}>Back To Index</Button>
+        <Button variant='warning' type='button' size='lg' block onClick={()=>onLinkClick('edit', drink)}>Edit Drink</Button>
+        <Button variant='danger' type='button' size='lg' block onClick={handleShow}>Delete Drink</Button>
+      </ButtonGroup>
+      
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Confirm Delete?</Modal.Title>

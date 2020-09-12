@@ -10,3 +10,12 @@ h1 {
 #basic-nav-dropdown {
   color: white;
 }
+
+.btn-group-vertical {
+  display: flex;
+  background-color: inherit;
+}
+
+.btn-group-vertical .btn {
+  flex: 1;
+}

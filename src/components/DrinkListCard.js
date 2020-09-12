@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import './css/DrinkListCard.css';
 
 function DrinkListCard(props) {
@@ -38,9 +39,11 @@ function DrinkListCard(props) {
         {quantity}
       </Card.Body>
       <Card.Footer>
-        <Button variant='primary' type='button' size='sm' block onClick={()=>onChangingQuantity(drink, 1)}>Add a Pint</Button>
-        <Button variant='success' type='button' size='sm' block onClick={()=>onChangingQuantity(drink, 124)}>Add a Keg</Button>
-        {removeButton}
+        <ButtonGroup vertical size='sm'>
+          <Button variant='primary' type='button' block onClick={()=>onChangingQuantity(drink, 1)}>Add a Pint</Button>
+          <Button variant='success' type='button' block onClick={()=>onChangingQuantity(drink, 124)}>Add a Keg</Button>
+          {removeButton}
+        </ButtonGroup>
       </Card.Footer>
     </Card>
   )

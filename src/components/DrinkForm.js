@@ -71,9 +71,9 @@ function DrinkForm(props) {
         </Col>
       </Row>
       <ButtonGroup vertical size='lg'>
-        <Button variant='success' type='submit' size='lg' block>{buttonText}</Button>
+        <Button variant='success' type='submit' block>{buttonText}</Button>
         {returnButton}
-        <Button variant='secondary' type='button' size='lg' block onClick={()=>onLinkClick('index')}>Back To Index</Button>
+        <Button variant='secondary' type='button' block onClick={()=>onLinkClick('index')}>Back To Index</Button>
       </ButtonGroup>
     </Form>
   )

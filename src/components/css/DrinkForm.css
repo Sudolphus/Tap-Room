@@ -6,11 +6,3 @@ small {
   text-align: center;
   font-weight: bold;
 }
-
-.btn-group-vertical {
-  display: flex;
-}
-
-.btn-group-vertical .btn {
-  flex: 1;
-}
