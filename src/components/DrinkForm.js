@@ -66,7 +66,7 @@ DrinkForm.propTypes = {
   defaultName: PropTypes.string,
   defaultBrand: PropTypes.string,
   defaultPrice: PropTypes.string,
-  defaultContent: PropTypes.string
+  defaultContent: PropTypes.string,
 }
 
 export default DrinkForm;
