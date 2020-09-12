@@ -1,11 +1,5 @@
 .custom-nav {
   background-color: #40434E;
-  display: flex;
-}
-
-nav {
-  flex: 1;
-  background-color: #629677;
 }
 
 .custom-link {
