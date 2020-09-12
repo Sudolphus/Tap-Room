@@ -7,3 +7,11 @@ small {
   color: #629677;
   font-weight: bold;
 }
+
+.btn-group-vertical {
+  display: flex;
+}
+
+.btn-group-vertical .btn {
+  flex: 1;
+}
