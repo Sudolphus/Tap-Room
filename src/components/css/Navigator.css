@@ -1,0 +1,19 @@
+.custom-nav {
+  background-color: #40434E;
+  display: flex;
+}
+
+nav {
+  flex: 1;
+  background-color: #629677;
+}
+
+.custom-link {
+  background-color: #629677;
+}
+
+.brand-img {
+  height: 30px;
+  width: 30px;
+}
+

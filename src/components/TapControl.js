@@ -4,6 +4,7 @@ import DrinkDetails from './DrinkDetails';
 import AddDrink from './AddDrink';
 import EditDrink from './EditDrink';
 import ErrorPage from './ErrorPage';
+import Navigator from './Navigator';
 
 class TapControl extends React.Component {
   constructor(props) {
@@ -91,6 +92,8 @@ class TapControl extends React.Component {
 
     return (
       <React.Fragment>
+        <Navigator
+          onLinkClick = {this.handleLinks} />
         {pageToDisplay}
       </React.Fragment>
     )

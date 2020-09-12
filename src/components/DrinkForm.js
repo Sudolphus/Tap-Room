@@ -66,7 +66,7 @@ function DrinkForm(props) {
           <Form.Group controlId='quantity'>
             <Form.Label>Pints Remaining</Form.Label>
             <Form.Control type='number' placeholder='Quantity Remaining' defaultValue={defaultQuantity} pattern='^\d+\$' min='0' step='1' required />
-            <Form.Text>The number of pints you have left. A standard keg is 124 pints.</Form.Text>
+            <Form.Text className='text-muted'>The number of pints you have left. A standard keg is 124 pints.</Form.Text>
           </Form.Group>
         </Col>
       </Row>
