@@ -16,7 +16,7 @@
 
 ---
 
-<p align="center"> An editable menu for a tap room. Features full Create-Read-Update-Destroy functionality.
+<p align="center"> An editable menu for a tap room. Features full Create-Read-Update-Destroy functionality. Note that this version of the app uses React's default state management tools. For the version that uses Redux to manage state, please see <a href="https://github.com/Sudolphus/Redux-Tap-Room">the sister project</a>
     <br> 
 </p>
 
